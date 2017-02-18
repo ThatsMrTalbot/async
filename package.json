@@ -1,0 +1,35 @@
+{
+  "name": "@thatsmrtalbot/async",
+  "version": "1.0.0",
+  "description": "Some async utils",
+  "main": "index.js",
+  "repository": {},
+  "author": "Adam Talbot",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^18.1.1",
+    "jest": "^18.1.0",
+    "ts-jest": "^18.0.3",
+    "typescript": "^2.1.6"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "clean": "rm *.js *.d.ts *.js.map"
+  },
+  "files": [
+    "*.js",
+    "*.d.ts",
+    "*.js.map" 
+  ],
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "/__tests__/.*\\.test.(ts|tsx|js)$"
+  }
+}
