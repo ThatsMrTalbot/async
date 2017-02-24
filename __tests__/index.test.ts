@@ -7,6 +7,7 @@ import tick from '../src/tick'
 import time from '../src/time'
 import wait from '../src/wait'
 import timeout from '../src/timeout'
+import {array, AsyncArray} from '../src/array'
 
 describe("Given the index", () => {
     describe("When imported", () => {
@@ -19,6 +20,8 @@ describe("Given the index", () => {
             expect(async.tick).toBe(tick)
             expect(async.time).toBe(time)
             expect(async.timeout).toBe(timeout)
+            expect(async.array).toBe(array)
+            expect(async.AsyncArray).toBe(AsyncArray)
         })
     })
 })
