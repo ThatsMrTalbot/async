@@ -8,10 +8,11 @@ import time from '../src/time'
 import wait from '../src/wait'
 import timeout from '../src/timeout'
 import {array, AsyncArray} from '../src/array'
+import Dispatch from '../src/dispatch'
 
 describe("Given the index", () => {
     describe("When imported", () => {
-        test("Then it should contain all the methods", () => {
+        test("Then it should contain all the methods", async () => {
             expect(async.all).toBe(all)
             expect(async.or).toBe(or)
             expect(async.promisify).toBe(promisify)
@@ -22,6 +23,7 @@ describe("Given the index", () => {
             expect(async.timeout).toBe(timeout)
             expect(async.array).toBe(array)
             expect(async.AsyncArray).toBe(AsyncArray)
+            expect(async.Dispatch).toBe(Dispatch)
         })
     })
 })
