@@ -9,6 +9,8 @@ export class Resolver<T> implements PromiseLike<T> {
             return new Resolver(promise);
         }
 
+        this.resolveFunction = null;
+        this.rejectFunction = null;
         this.promise = promise || new Promise(this.promiseExecutor.bind(this));
     }
 
