@@ -1,6 +1,6 @@
 {
   "name": "@thatsmrtalbot/async",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Some async utils",
   "main": "index.js",
   "repository": "thatsmrtalbot/async",
