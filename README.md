@@ -106,6 +106,35 @@ Tick uses setTimeout to wait a specified amount of time:
 await wait(500)
 ```
 
+### array
+
+Some async versions of array utils
+
+```typescript
+let odd = await array([1,2,3,4,5]).filterAsync(async (value, index) => value % 2)
+```
+
+```typescript
+let even = await array([1,2,3,4,5]).mapAsync(async (value, index) => value * 2)
+```
+
+```typescript
+await array([1,2,3,4,5]).forEachAsync(async (value, index) => console.log(value))
+```
+
+### dispatch
+
+Dispatch promise values using keys
+
+```typescript
+let dispatcher = new Dispatch();
+let promise = dispatcher.next("key");
+
+dispatcher.dispatch("key", "value");
+
+console.log(await promise) // value
+```
+
 ### retry
 
 Retry function with optional wait time

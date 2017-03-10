@@ -8,6 +8,8 @@ import time from '../src/time'
 import wait from '../src/wait'
 import retry from '../src/retry'
 import timeout from '../src/timeout'
+import {array, AsyncArray} from '../src/array'
+import Dispatch from '../src/dispatch'
 
 describe("Given the index", () => {
     describe("When imported", () => {
@@ -20,6 +22,9 @@ describe("Given the index", () => {
             expect(async.tick).toBe(tick)
             expect(async.time).toBe(time)
             expect(async.timeout).toBe(timeout)
+            expect(async.array).toBe(array)
+            expect(async.AsyncArray).toBe(AsyncArray)
+            expect(async.Dispatch).toBe(Dispatch)
             expect(async.retry).toBe(retry)
         })
     })

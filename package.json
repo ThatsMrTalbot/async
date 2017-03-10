@@ -1,9 +1,9 @@
 {
   "name": "@thatsmrtalbot/async",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Some async utils",
   "main": "index.js",
-  "repository": {},
+  "repository": "thatsmrtalbot/async",
   "author": "Adam Talbot",
   "license": "MIT",
   "devDependencies": {
@@ -20,7 +20,7 @@
   "files": [
     "*.js",
     "*.d.ts",
-    "*.js.map" 
+    "*.js.map"
   ],
   "jest": {
     "moduleFileExtensions": [
@@ -33,6 +33,6 @@
     "testRegex": "/__tests__/.*\\.test.(ts|tsx|js)$"
   },
   "publishConfig": {
-    "access" : "public"
+    "access": "public"
   }
 }
