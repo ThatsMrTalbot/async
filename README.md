@@ -105,3 +105,14 @@ Tick uses setTimeout to wait a specified amount of time:
 ```typescript
 await wait(500)
 ```
+
+### retry
+
+Retry function with optional wait time
+
+```typescript
+// Three attempts with 1 second wait
+await retry(async () => {
+    await doTheThing();
+}, 3, 1000)
+```

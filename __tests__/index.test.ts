@@ -6,6 +6,7 @@ import Resolver from '../src/resolver'
 import tick from '../src/tick'
 import time from '../src/time'
 import wait from '../src/wait'
+import retry from '../src/retry'
 import timeout from '../src/timeout'
 
 describe("Given the index", () => {
@@ -19,6 +20,7 @@ describe("Given the index", () => {
             expect(async.tick).toBe(tick)
             expect(async.time).toBe(time)
             expect(async.timeout).toBe(timeout)
+            expect(async.retry).toBe(retry)
         })
     })
 })

@@ -41,7 +41,7 @@ export function promisify(fn : Function) : Function {
 export function promisifyAll(ob : Object) : Object {
     for (let key in ob) {
         if (typeof ob[key] === 'function') {
-            ob[`keyAsync`] = promisify(ob[key]);
+            ob[`${key}Async`] = promisify(ob[key]);
         }
     }
 
