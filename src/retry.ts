@@ -4,7 +4,7 @@ export async function retry<T>(fn : () => Promise<T>, retries = 3, delay = 0) : 
     try {
         return await fn();
     } catch(e) {
-        if (retries > 0) {
+        if (retries > 1) {
             await wait(delay);
             return await retry(fn, retries - 1, delay);
         }else {

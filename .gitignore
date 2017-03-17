@@ -61,3 +61,6 @@ typings/
 *.js
 *.js.map
 *.d.ts
+
+# ide's
+.idea/
