@@ -26,6 +26,26 @@ describe("Given an async function", () => {
 })
 
 describe("Given an async function", () => {
+
+    describe("When the function is called", () => {
+
+        test("It should be passed the zero-indexed attempt count", async () => {
+            let attempts: number[] = [];
+
+            await retry(async (attempt) => {
+                attempts.push(attempt);
+                if (attempt < 5) {
+                    return Promise.reject("error")
+                }
+                return Promise.resolve("success")
+            }, 10);
+
+            expect(attempts).toEqual([0, 1, 2, 3, 4, 5])
+        })
+    })
+})
+
+describe("Given an async function", () => {
     let fn : jest.Mock<void>
 
     beforeAll(() => {
