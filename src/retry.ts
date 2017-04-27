@@ -1,13 +1,17 @@
 import wait from './wait'
 
-export async function retry<T>(fn : () => Promise<T>, retries = 3, delay = 0) : Promise<T> {
+export async function retry<T>(fn : (attempt? : number) => Promise<T>, retries = 3, delay = 0) : Promise<T> {
+    return await _retry(fn, retries, delay);
+}
+
+async function _retry<T>(fn : (attempt? : number) => Promise<T>, retries: number, delay: number, attempt = 0) : Promise<T> {
     try {
-        return await fn();
+        return await fn(attempt);
     } catch(e) {
-        if (retries > 1) {
+        if (attempt < retries - 1) {
             await wait(delay);
-            return await retry(fn, retries - 1, delay);
-        }else {
+            return await _retry(fn, retries, delay, attempt + 1);
+        } else {
             throw e;
         }
     }
